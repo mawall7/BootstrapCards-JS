@@ -22,6 +22,11 @@
             padding-top: 10px;
             
         }
+        h1{
+            font-family: 'Cormorant SC';
+            margin-bottom: 20px;
+        }
+
         /* .pcol2{
             position: relative;
             left: 120px;
@@ -44,11 +49,13 @@
 
 </head>
 <body>
+    <h1 class = "display-5">Change elements example</h1>
+ 
 <div class="row"> 
   <div class=" col col-6" id="myCol">
     <p class="lead" style="background-color:silver ; display:inline-block;">Ändra elementen genom att klicka på dom!</p>
-    <p id="jselement">one</p>
-    <p>two</p>
+    <p class="jselement">one</p>
+    <p class="jselement">two</p>
     <br>
     <div id="group2">
        <p id="Add" class="lead" style="background-color: silver; display:inline-block; margin:1%;">Klicka och lägg till ett element!</p>
@@ -63,9 +70,11 @@
  </div>
 </div>
 
+
     <br>
     <hr>
-    <br>
+    <h1>Change images example</h1>
+    <p class="lead" style="background-color:silver ; display:inline-block;">Skriv hur många bilder som ska visas!</p>
     <div class="input-group-text ml-3">
         <input class="form-control" id="myinput"type="number">
         <div class="input-group-append">
@@ -104,7 +113,28 @@
       <script>
 
         //   let p = document.getElementById("Add").addEventListener('click',function(e) {
+
+            let elem = document.getElementsByClassName("jselement");
+            // elem[0].innerHTML = "hej";
+          
+            for (let i = 0; i < elem.length; i++) {
+
+             elem[i].addEventListener('click', function(e){
+                        
+                 elem[i].innerHTML ="hej";                
+            
               
+              
+             })            
+             
+           }
+                    
+          //       item.addEventListener('click', function(e){           
+          //       item.innerHTML = "hej";
+                
+          //   })
+          // }
+
             btnE =document.createElement("button");
             btnE.setAttribute("id","changebtn");
             btnE.innerHTML = "click here!"
