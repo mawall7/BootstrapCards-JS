@@ -23,9 +23,15 @@
 
 </head>
 <body>
-    <p style="background-color: silver; display:inline-block">Ändra elementen genom att klicka på dom!</p>
+    <p class="lead" style="background-color: silver; display:inline-block">Ändra elementen genom att klicka på dom!</p>
     <p id="jselement">one</p>
     <p>two</p>
+    <br>
+    <div id="group2">
+       <p id="Add" class="lead" style="background-color: silver; display:inline-block">Klicka och lägg till ett element!</p>
+    </div> 
+    
+    <br>
     <br>
 
     <div class="card-group">
@@ -55,15 +61,23 @@
         </div>
       </div>
       <script>
-        
-          let x = document.getElementsByTagName("p");
-          for (let index = 0; index < 2; index++) {
-              x[index].addEventListener('click',function(e){
 
-                x[index].innerHTML = "changed!";
-              });
+          let p = document.getElementById("Add").addEventListener('click',function(e) {
               
-          }
+            let newp = document.createElement("P");
+           
+            document.getElementById("group2").appendChild(newp); 
+            newp.innerHTML = "nytt element!";
+          })
+        
+        //   let x = document.getElementsByTagName("p");
+        //   for (let index = 0; index < 2; index++) {
+        //       x[index].addEventListener('click',function(e){
+
+        //         x[index].innerHTML = "changed!";
+        //       });
+              
+        //   }
       </script>
     
 </body>
