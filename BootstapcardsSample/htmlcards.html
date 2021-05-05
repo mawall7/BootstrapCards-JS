@@ -65,14 +65,27 @@
         //   let p = document.getElementById("Add").addEventListener('click',function(e) {
               
             btnE =document.createElement("button");
+            btnE.setAttribute("id","changebtn");
 
             document.getElementById("Add").appendChild(btnE);
+            btnE.Id ="changebtn";
 
-            let newp = document.createElement("P");
+            document.getElementById("changebtn").addEventListener('click',function(e){
+
+                let newp = document.createElement("P");
            
-            document.getElementById("group2").appendChild(newp); 
-            newp.innerHTML = "nytt element!";
+                document.getElementById("group2").appendChild(newp); 
+                newp.innerHTML = "nytt element!";
         
+
+            })
+            //.AddEvenListener("click",function (e) {
+            
+            
+
+            
+
+            
         
         //   let x = document.getElementsByTagName("p");
         //   for (let index = 0; index < 2; index++) {
