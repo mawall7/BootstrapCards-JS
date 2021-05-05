@@ -11,10 +11,22 @@
    
     <lin href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
+
+    <style>
+
+        p{
+            margin-left: 1%;
+        } 
+    </style>
+
 </head>
 <body>
+    <p style="background-color: silver; display:inline-block">Ändra elementen genom att klicka på dom!</p>
+    <p id="jselement">one</p>
+    <p>two</p>
+    <br>
 
     <div class="card-group">
         <div class="card">
@@ -42,6 +54,17 @@
           </div>
         </div>
       </div>
+      <script>
+        
+          let x = document.getElementsByTagName("p");
+          for (let index = 0; index < 2; index++) {
+              x[index].addEventListener('click',function(e){
+
+                x[index].innerHTML = "changed!";
+              });
+              
+          }
+      </script>
     
 </body>
 </html>
