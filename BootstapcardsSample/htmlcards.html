@@ -18,7 +18,9 @@
 
         p{
             margin-left: 1%;
-        } 
+        }
+
+         
     </style>
 
 </head>
@@ -28,7 +30,7 @@
     <p>two</p>
     <br>
     <div id="group2">
-       <p id="Add" class="lead" style="background-color: silver; display:inline-block">Klicka och lägg till ett element!</p>
+       <p id="Add" class="lead" style="background-color: silver; display:inline-block ; margin:1%;">Klicka och lägg till ett element!</p>
     </div> 
     
     <br>
@@ -66,6 +68,8 @@
               
             btnE =document.createElement("button");
             btnE.setAttribute("id","changebtn");
+            btnE.innerHTML = "click to change!"
+            btnE.setAttribute("style", "margin-left:5px;")
 
             document.getElementById("Add").appendChild(btnE);
             btnE.Id ="changebtn";
