@@ -62,13 +62,17 @@
       </div>
       <script>
 
-          let p = document.getElementById("Add").addEventListener('click',function(e) {
+        //   let p = document.getElementById("Add").addEventListener('click',function(e) {
               
+            btnE =document.createElement("button");
+
+            document.getElementById("Add").appendChild(btnE);
+
             let newp = document.createElement("P");
            
             document.getElementById("group2").appendChild(newp); 
             newp.innerHTML = "nytt element!";
-          })
+        
         
         //   let x = document.getElementsByTagName("p");
         //   for (let index = 0; index < 2; index++) {
