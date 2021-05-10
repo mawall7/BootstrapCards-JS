@@ -8,13 +8,14 @@
         <title>Document</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href= "http://fonts.googleapis.com/css?family=Open+Sans:400,700";>
+        <link href= "http://fonts.googleapis.com/css?family=Open+Sans:400,700">
         
         
         <lin href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
-
+        
+        <script src="https://kit.fontawesome.com/f908495418.js" crossorigin="anonymous"></script>
 
     <style>
 
@@ -51,6 +52,16 @@
  
 }
 
+#reset{
+  width: fit-content;
+  
+}
+
+.fa-fish{
+  width: 20px;
+  height: 20px;
+}
+
 
 
              
@@ -81,21 +92,54 @@
     <p class="jselement">one</p>
     <p class="jselement">two</p>
     <br>
-    <div id="group2">
+    <span id="group2">
        <p id="Add" class="lead" style="background-color: silver; display:inline-block; margin:1%;">Klicka och lägg till ett element!</p>
        <span>-></span>
+       
+    </span>
+    <br>
+    <div class="d-flex justify-content-start">
+         <a class="btn btn-primary" id = "reset" onclick="document.location.reload()">reset</a>
     </div>
  </div>  
 
- <div class="=col-6 d-flex flex-column justify-content-center align-items-center" id="myCol2">
+ <div class="=col-6  mt-5" id="myCol2">
      
- <div class="align-self-center">Kolumn2</div>
+  <div class="d-flex flex-column adjust-content-start align-items-center">
+    
+   <div>Kolumn2</div>
       
-  <div class="onMouse">Hovra över texten under!</div>
+      <div class="onMouse">Hovra över texten under!</div>
      
-       <div class="myText" style="color:tomato;"> color will change</div>
+      <div class="myText" style="color:tomato;"> color will change</div>
+      <br>
+      <span class="lead">frågor om djur&nbsp&nbsp;<i class="fas fa-fish" style="font-size: 30px;"></i></span>
+  </div>
+  <span><br><span>
+    <div class="d-flex flex-row justify-content-start">
+    
   
- 
+  
+    </div>
+  
+<form id="myForm">
+  <div class="input-group">
+
+      <span>vilket djur lever längst?&ensp;</span>
+      <label for="cat">katt<i class="fas fa-cat"></i>&nbsp;&nbsp; </label>
+      <input type="checkbox" name="cat" value="cat">&nbsp;
+      <label for="flodhäst">flodhäst<i class="fas fa-hippo"></i>&nbsp;&nbsp;</label>
+
+      <input type="checkbox" name="hippo" value="flodhäst">
+      <label for="groda">groda  <i class="fas fa-frog"></i>&nbsp;&nbsp;
+      </label>
+      <input type="checkbox" name="cat" value="cat">
+
+      
+    </div>
+
+  
+ </form>
 </div>
 
 </div>
@@ -166,14 +210,10 @@
              })            
              
            }
-                    
-          //       item.addEventListener('click', function(e){           
-          //       item.innerHTML = "hej";
-                
-          //   })
-          // }
+                             
 
           createBtn();
+
 
 
             function createBtn(){
@@ -183,7 +223,6 @@
             btnE.setAttribute("style", "margin-left: 10px; position:relative; bottom:3px;")
             document.getElementById("group2").appendChild(btnE);
             btnE.Id ="changebtn";
-          
             }
 
             
@@ -195,13 +234,17 @@
             document.getElementById("changebtn").addEventListener('click',function(e){
 
                 let newp = document.createElement("P");
+                
            
                 document.getElementById("group2").appendChild(newp); 
                 newp.innerHTML = "nytt element!";
+                e.target.setAttribute("style", "margin-left: 10px; position:relative; bottom:3px;  color: blue");
+                setTimeout(() => {
+                  e.target.setAttribute("style", "margin-left: 10px; position:relative; bottom:3px");
+                }, 1000);
                 
-           
-
-            })
+                           
+              })
 
             var imgs = document.getElementsByTagName("img");
             for (let index = 0; index < 3; index++) {
